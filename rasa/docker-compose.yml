@@ -1,0 +1,41 @@
+version: "3.0"
+
+services:
+  duckling:
+    container_name: "duckling"
+    image: rasa/duckling
+    ports:
+      - 8000:8000
+
+  action_ep:
+    build:
+      context: action_ep
+    container_name: "action_ep"
+    volumes:
+      - ./action_ep/actions:/app/actions
+    ports:
+      - 5055:5055
+
+  rasa_ep:
+    build:
+      context: rasa_ep
+    container_name: "rasa_ep"
+    volumes:
+      - ./rasa_ep:/app
+    ports:
+      - 5005:5005
+
+  html:
+    build:
+      context: html
+      dockerfile: Dockerfile
+    container_name: "html"
+    ports:
+      - 5000:5000
+
+  wx:
+    build:
+      context: wx
+    container_name: "wx"
+    ports:
+      - 80:80
