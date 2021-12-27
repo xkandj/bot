@@ -1,3 +1,6 @@
 [submodule "rasa/wx"]
 	path = rasa/wx
 	url = git@github.com:JosiahMg/wx.git
+[submodule "rasa/rasa_ep"]
+	path = rasa/rasa_ep
+	url = git@github.com:JosiahMg/rasa_ep.git
