@@ -4,3 +4,6 @@
 [submodule "rasa/rasa_ep"]
 	path = rasa/rasa_ep
 	url = git@github.com:JosiahMg/rasa_ep.git
+[submodule "rasa/action_ep"]
+	path = rasa/action_ep
+	url = git@github.com:JosiahMg/action_ep.git
