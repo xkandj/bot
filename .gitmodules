@@ -1,12 +1,12 @@
 [submodule "rasa/wx"]
 	path = rasa/wx
-	url = git@github.com:JosiahMg/wx.git
+	url = https://github.com/JosiahMg/wx.git
 [submodule "rasa/rasa_ep"]
 	path = rasa/rasa_ep
-	url = git@github.com:JosiahMg/rasa_ep.git
+	url = https://github.com/JosiahMg/rasa_ep.git
 [submodule "rasa/action_ep"]
 	path = rasa/action_ep
-	url = git@github.com:JosiahMg/action_ep.git
+	url = https://github.com/JosiahMg/action_ep.git
 [submodule "rasa/html"]
 	path = rasa/html
-	url = git@github.com:JosiahMg/html.git
+	url = https://github.com/JosiahMg/html.git
