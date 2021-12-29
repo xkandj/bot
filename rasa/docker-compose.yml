@@ -24,7 +24,9 @@ services:
       - ./rasa_ep:/app
     ports:
       - 5005:5005
-
+    depends_on:
+      - duckling
+      - action_ep
   html:
     build:
       context: html
@@ -32,6 +34,8 @@ services:
     container_name: "html"
     ports:
       - 5000:5000
+    depends_on:
+      - rasa_ep
 
   wx:
     build:
@@ -39,3 +43,5 @@ services:
     container_name: "wx"
     ports:
       - 80:80
+    depends_on:
+      - rasa_ep
