@@ -32,6 +32,8 @@ services:
       context: html
       dockerfile: Dockerfile
     container_name: "html"
+    volumes:
+      - ./html:/app/rasaweb
     ports:
       - 5000:5000
     depends_on:
@@ -41,6 +43,8 @@ services:
     build:
       context: wx
     container_name: "wx"
+    volumes:
+      - ./wx:/app/rasaweb
     ports:
       - 80:80
     depends_on:
