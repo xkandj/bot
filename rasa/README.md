@@ -5,6 +5,9 @@ docker: 20.10.12
 
 # 启动所有服务
 ```shell
+chmod +x first_time_start.sh
+./first_time_start.sh
+or Run directly:
 docker-compose up -d
 ```
 
