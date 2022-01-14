@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 function isCmdExist()
 {
     local cmd="$1"
@@ -30,14 +32,14 @@ function installVirtualenv()
 
 function createVirtualEnv()
 {
-    if [ -f "$(pwd)/rasa_ep/runenv/bin/activate" ]; then
-        echo "virtualenv already existed"
-        source "$(pwd)/rasa_ep/runenv/bin/activate"
+    if [ -f "$(pwd)/runenv/bin/activate" ]; then
+        echo "runenv already existed"
+        source "$(pwd)/runenv/bin/activate"
     else
-        echo "virtualenv not exist, create now ..."
-        virtualenv "$(pwd)/rasa_ep/runenv"
-        source "$(pwd)/rasa_ep/runenv/bin/activate"
-        pip install -r rasa_ep/requirements.txt
+        echo "runenv not exist, create now ..."
+        virtualenv "$(pwd)/runenv"
+        source "$(pwd)/runenv/bin/activate"
+        pip install -r rasa_ep/requirements_all.txt
         python3 -m spacy download zh_core_web_sm
     fi
     return 0
