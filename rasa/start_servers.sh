@@ -55,7 +55,7 @@ echo "deleting models and cache ..."
 sudo rm -rf .rasa/
 sudo rm -rf models/
 echo "start rasa train ..."
-rasa train
+rasa train --domain domains
 cd ..
 echo "deactivate runenv ..."
 deactivate
