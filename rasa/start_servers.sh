@@ -59,7 +59,5 @@ rasa train --domain domains
 cd ..
 echo "deactivate runenv ..."
 deactivate
-echo "run docker-compose down ..."
-docker-compose down
 echo "run docker-compose up ..."
 docker-compose up -d
