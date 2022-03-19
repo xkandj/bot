@@ -39,8 +39,8 @@ function createVirtualEnv()
         echo "runenv not exist, create now ..."
         virtualenv "$(pwd)/runenv"
         source "$(pwd)/runenv/bin/activate"
+	pip install package/zh_core_web_sm-3.2.0.tar.gz
         pip install -r rasa_ep/requirements_all.txt
-        python3 -m spacy download zh_core_web_sm
     fi
     return 0
 }
